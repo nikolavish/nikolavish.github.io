@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+*{
+	margin:0px;
+	padding: 0px;
+	font-family: "JetBrains Mono";
+	color: white;
+	scroll-behavior: smooth;
+}
+@keyframes clicking{
+	0%{
+		background: rgba(255,255,255,0);
+	}50%{
+		background: rgba(255,255,255,0.2);
+	}100%{
+		background: rgba(255,255,255,0);
+	}
+}
+@keyframes clicking1{
+	0%{
+		border-right: 3px solid transparent;
+	}50%{
+		border-right: 3px solid green;
+	}100%{
+		border-right: 3px solid transparent;
+	}
+}
+@keyframes fade{
+	0%{
+		filter: brightness(0) blur(50px);
+	}100%{
+		filter: brightness(1) blur(0px);
+	}
+}
+:root{
+	--primary:#090f1a;
+	--secondary:#3371ff;
+}
+::-webkit-scrollbar{
+	width: 12px;
+	height: 12px;
+	background: var(--primary);
+}
+::-webkit-scrollbar-thumb{
+	border: 4px solid var(--primary);
+	background: white;
+	border-radius: 16px;
+}
+::-webkit-scrollbar-thumb:hover{
+	background: #273b60;
+}
+body{
+	font-family: "JetBrains Mono";
+	background: var(--primary);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	max-width: 960px;
+	margin: auto;
+	overflow-x: hidden;
+}
+header{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	animation: fade 2s ease;
+	flex-wrap: wrap-reverse;
+}
+header section h1{
+	font-size: 36px;
+	letter-spacing: 1px;
+}
+header section h1 span{
+	background: rgba(255,255,255,0.2);
+	animation: clicking 1s infinite;
+	font-weight: bold;
+}
+header section p{
+	font-size: 12px;
+}
+header section #subanimated{
+	color: green;
+	animation: clicking1 800ms infinite;
+	width: fit-content;
+	height: 14px;
+}
+header section #links{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	list-style-type:none;
+	margin-top: 8px;
+}
+header section #links a{
+	display: flex;
+	padding: 12px;
+	margin: 2px;
+	background: #273b60;
+	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 5px;
+	box-shadow: 1px 1px 0 #1d2d4a,2px 2px 0 #1d2d4a,3px 3px 0 #1d2d4a,4px 4px 0 transparent;
+	transition: 200ms ease;
+	font-size: 12px;
+	text-decoration: none;
+}
+header section #links a:hover{
+	box-shadow: 1px 1px 0 #1d2d4a,2px 2px 0 #1d2d4a,3px 3px 0 #1d2d4a,4px 4px 0 #1d2d4a;
+	transform: translate(-1px,-1px);
+	transition: 200ms ease;
+}
+header section #knowledge{
+	display: flex;
+	list-style-type: none;
+	font-size: 12px;
+	flex-wrap: wrap;
+	width:300px;
+	margin-top: 4px;
+}
+header section #knowledge li{
+	padding: 8px;
+	margin:4px;
+	background: #1d2d4a;
+	border-radius: 5px;
+}
+header div{
+	width: 500px;
+	aspect-ratio:calc(16/9);
+	display: flex;
+	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 5px;
+	box-shadow: 1px 1px 0 #1d2d4a,2px 2px 0 #1d2d4a,3px 3px 0 #1d2d4a,4px 4px 0 transparent,5px 5px 0 #1d2d4a,6px 6px 0 transparent;
+	transition: 200ms ease;
+	position: relative;
+}
+header div:hover{
+	box-shadow: 1px 1px 0 #1d2d4a,2px 2px 0 #1d2d4a,3px 3px 0 #1d2d4a,4px 4px 0 #1d2d4a,5px 5px 0 #1d2d4a,6px 6px 0 #1d2d4a;
+	transform: translate(-3px,-3px);
+	transition: 200ms ease;
+}
+header div img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+main{
+	width: 100%;
+}
+main div .header{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 64px;
+}
+main div .header h1{
+	font-size:48px;
+	mix-blend-mode: overlay;
+	transform: rotate(90deg);
+}
+main div .header section h2{
+	font-size: 48px;
+}
+main div .header section p{
+	font-weight: lighter;
+	font-size: 12px;
+}
+main div .header hr{
+	width: 160px;
+	fill: white;
+	margin-left: 16px;
+	mix-blend-mode: overlay;
+}
+#proekti,#zamene{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+}
+#proekti .post{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+#proekti .post a{
+	background: #273b60;
+	display: flex;
+	flex-direction: column;
+	width: 360px;
+	height: 140px;
+	align-items: center;
+	justify-content: center;
+	padding: 32px;
+	box-sizing: border-box;
+	margin: 4px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	box-shadow: 1px 1px 0 #1d2d4a,2px 2px 0 #1d2d4a,3px 3px 0 #1d2d4a;
+	font-size: 12px;
+	text-decoration: none;
+	transition: 200ms;
+}
+#proekti .post a:hover{
+	box-shadow: 1px 1px 0 #1d2d4a,2px 2px 0 #1d2d4a,3px 3px 0 #1d2d4a,4px 4px 0 transparent,5px 5px 0 #1d2d4a,6px 6px 0 transparent;
+	transform: translate(-3px,-3px);
+	transition: 200ms;
+}
+#proekti .post a div{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	box-sizing: border-box;
+	margin-bottom: 8px;
+}
+#proekti .post a div svg{
+	height: 16px;
+	aspect-ratio:1;
+	fill: white;
+}
+#proekti .post a div h1{
+	font-size: 16px;
+	margin-left: 8px;
+}
+#proekti .post p{
+	font-size: 11px;
+	word-break: break-all;
+	width: 100%;
+}
+#proekti .post ul{
+	list-style-type: none;
+	width: 100%;
+}
+#proekti .post ul li{
+	display: flex;
+	margin-top: 8px;
+}
+#proekti .post ul li span{
+	display: block;
+	margin-right: 8px;
+	height: 16px;
+	aspect-ratio:1;
+	background: #f1e05a;
+	border-radius: 100%;
+}
+#zamene section h1{
+	font-size: 36px;
+	letter-spacing: 1px;
+}
+#zamene section h1 span{
+	background: rgba(255,255,255,0.2);
+	animation: clicking 1s infinite;
+	font-weight: bold;
+}
+#zamene section p{
+	font-size: 12px;
+}
+#zamene section ul{
+	font-size: 12px;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	width: fit-content;
+	list-style-type: none;
+	flex-wrap: wrap;
+}
+#zamene section ul li{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	margin: auto;
+}
+#zamene section #subanimated2{
+	color: green;
+	animation: clicking1 800ms infinite;
+	width: fit-content;
+	height: 14px;
+}
+#zamene section ul span{
+	display: flex;
+	padding: 8px;
+	margin: 0px 4px;
+	background: #273b60;
+	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 5px;
+	box-shadow: 1px 1px 0 #1d2d4a,2px 2px 0 #1d2d4a,3px 3px 0 #1d2d4a,4px 4px 0 transparent;
+	transition: 200ms ease;
+	font-size: 12px;
+	text-decoration: none;
+}
+#zamene section ul span:hover{
+	box-shadow: 1px 1px 0 #1d2d4a,2px 2px 0 #1d2d4a,3px 3px 0 #1d2d4a,4px 4px 0 #1d2d4a;
+	transform: translate(-1px,-1px);
+	transition: 200ms ease;
+}
